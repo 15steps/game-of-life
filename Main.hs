@@ -44,7 +44,7 @@ renderCell :: Board -> Coord -> Picture
 renderCell board coord@(Coord x y) 
     = Color (makeColor 1.0 green 1.0 1.0)
     $ Translate (-200.0 + fromIntegral(x)) (-200.0 + fromIntegral(y))
-    $ rectangleSolid 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     0 10
+    $ rectangleSolid 10 10
     where
         green = if (bGrid board ! x ! y) == Alive then 0.0 else 1.0
         width = bWidth board
